@@ -7,7 +7,7 @@ This is a sample Markdown file that demonstrates various Markdown syntax element
 ### Text Formatting
 
 - **Bold Text**: **This text is bold**
-- *Italic Text*: *This text is italicized*
+- _Italic Text_: _This text is italicized_
 - ~~Strikethrough Text~~: ~~This text is strikethrough~~
 
 ### Lists
@@ -20,8 +20,8 @@ This is a sample Markdown file that demonstrates various Markdown syntax element
 
 - Unordered List Item 1
 - Unordered List Item 2
-   - Nested Unordered List Item A
-   - Nested Unordered List Item B
+  - Nested Unordered List Item A
+  - Nested Unordered List Item B
 - Unordered List Item 3
 
 ### Code Blocks
@@ -32,3 +32,4 @@ public class HelloWorld {
         System.out.println("Hello, World!");
     }
 }
+```

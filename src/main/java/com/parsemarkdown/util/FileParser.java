@@ -51,4 +51,13 @@ public class FileParser {
         System.out.println(fileContent);
         System.out.println("-----------------------------");
     }
+
+    public String readMarkdownFile(String filename) throws IOException {
+        Path markdownFilePath = Paths.get(sourceDirectoryPath, filename);
+        if (!Files.exists(markdownFilePath)) {
+            throw new IOException("Markdown file not found: " + filename);
+        }
+
+        return Files.readString(markdownFilePath);
+    }
 }
