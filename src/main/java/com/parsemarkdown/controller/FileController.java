@@ -26,14 +26,29 @@ public class FileController {
         return "Files parsed successfully.";
     }
 
-    @GetMapping("/render-markdown")
-    public String renderMarkdown(@RequestParam String filename) throws IOException {
-        String markdownContent = readMarkdownFile(filename);
+    // @GetMapping("/render-markdown")
+    // public String renderMarkdown(@RequestParam String filename) throws IOException {
+    //     String markdownContent = readMarkdownFile(filename);
 
+
+    //     Parser parser = Parser.builder().build();
+    //     Node document = parser.parse(markdownContent);
+
+
+    //     HtmlRenderer renderer = HtmlRenderer.builder().build();
+    //     String htmlContent = renderer.render(document);
+
+    //     return htmlContent;
+    // }
+
+
+    @GetMapping("/render-markdown")
+    public String renderMarkdown() throws IOException {
+        String filename = "test.md"; // Or your preferred logic for default filename
+        String markdownContent = readMarkdownFile(filename);
 
         Parser parser = Parser.builder().build();
         Node document = parser.parse(markdownContent);
-
 
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         String htmlContent = renderer.render(document);

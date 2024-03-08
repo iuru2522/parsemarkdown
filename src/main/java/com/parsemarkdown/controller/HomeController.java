@@ -19,7 +19,7 @@ public class HomeController {
     @GetMapping("/")
     public String home(@ModelAttribute("filename") String filename, Model model) {
         if (filename == null || filename.isEmpty()) {
-            filename = "test.md"; // Default filename
+            filename = "test2.md"; // Default filename
         }
 
         try {
